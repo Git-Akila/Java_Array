@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class missing_number {
+    public static void main(String args[]) {
+        Scanner aki = new Scanner(System.in);
+        System.out.println("Enter the n Value:");
+        int n=aki.nextInt();
+        System.out.println("Enter the Elements:");
+        int b[]=new int[n];
+        int sumofArray=0;
+        for(int i=1;i<n;i++){
+            b[i]=aki.nextInt();
+            sumofArray=sumofArray+b[i];
+        }
+        int SumofAll=(n*(n+1))/2;
+        int MissingNumber=SumofAll-sumofArray;
+        System.out.println("Missing Number:"+MissingNumber);
+
+
+
+    }
+}
