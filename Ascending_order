@@ -1,0 +1,27 @@
+import java.util.Scanner;
+import java.util.Arrays;
+public class array4 {
+    public static void main(String args[])
+    {
+        Scanner aki=new Scanner(System.in);
+        System.out.println("Enter the limit n:");
+        int n=aki.nextInt();
+        System.out.println("Enter the elements:");
+        int input[]=new int[n];
+        for(int i=0;i<n;i++)
+        {
+           input[i]=aki.nextInt();
+        }
+        for(int i=0;i<n;i++)
+        {
+            for(int j=i+1;j<n;j++)
+            {
+                if(input[i]>input[j]){
+                    int a=input[i];
+                    input[i]=input[j];
+                    input[j]=a;
+                }
+            }
+
+        }
+        System.out.println("After sorting:"+Arrays.toString(input));
